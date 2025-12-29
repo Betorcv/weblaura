@@ -1,0 +1,576 @@
+.main {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffffff 0%, #faf8f3 50%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(232, 180, 184, 0.08) 0%, transparent 50%);
+  opacity: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.heroName {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 400;
+  color: #2c2c2c;
+  margin: 0;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.heroName::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: var(--primary-gold);
+}
+
+.ampersand {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: var(--primary-gold);
+  font-weight: 300;
+  font-style: italic;
+  margin: 0 1rem;
+}
+
+.heroDate {
+  font-size: clamp(1.3rem, 3.5vw, 2rem);
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.heroDecoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, #fafafa);
+}
+
+/* Countdown Section */
+.countdownSection {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #faf8f3 0%, #ffffff 100%);
+  text-align: center;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: #2c2c2c;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.countdownItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  background: var(--white);
+  border-radius: 20px;
+  min-width: 140px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.countdownItem:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.countdownNumber {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #2c2c2c;
+  font-family: 'Playfair Display', serif;
+  line-height: 1;
+}
+
+.countdownLabel {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+/* Story Section */
+.storySection {
+  padding: 8rem 2rem;
+  background: var(--white);
+}
+
+.storyContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.storyText {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #444;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.storyText p {
+  margin-bottom: 2rem;
+}
+
+.storyQuote {
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--primary-gold);
+  text-align: center;
+  padding: 3rem 2rem;
+  border-left: 4px solid var(--primary-gold);
+  background: rgba(201, 169, 97, 0.05);
+  margin-top: 3.5rem;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* Event Section */
+.eventSection {
+  padding: 8rem 2rem;
+  background: linear-gradient(135deg, #faf8f3 0%, #ffffff 100%);
+}
+
+.eventDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eventCard {
+  text-align: center;
+  padding: 3.5rem 2.5rem;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.eventCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.eventIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  filter: grayscale(20%);
+}
+
+.eventCard h3 {
+  font-size: 1.6rem;
+  color: #2c2c2c;
+  margin-bottom: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.eventCard p {
+  color: #666;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.eventTime,
+.eventAddress,
+.eventNote {
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 0.8rem;
+  line-height: 1.6;
+}
+
+.eventDescription {
+  max-width: 800px;
+  margin: 3rem auto 0;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.eventDescription p {
+  margin-bottom: 1.5rem;
+}
+
+.eventHighlight {
+  font-size: 1.4rem;
+  color: var(--primary-gold);
+  font-weight: 600;
+  margin-top: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+
+/* Gallery Section */
+.gallerySection {
+  padding: 8rem 2rem;
+  background: var(--white);
+}
+
+/* Honeymoon Section */
+.honeymoonSection {
+  padding: 7rem 2rem;
+  background: linear-gradient(135deg, #faf8f3 0%, #ffffff 100%);
+}
+
+.honeymoonContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.honeymoonText {
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 2;
+  color: #444;
+  font-weight: 300;
+}
+
+.honeymoonText p {
+  margin-bottom: 2rem;
+}
+
+.honeymoonHighlight {
+  font-size: 1.3rem;
+  color: var(--primary-gold);
+  font-style: italic;
+  margin: 2.5rem 0;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.8;
+}
+
+.honeymoonNote {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 2.5rem 0 3rem;
+  line-height: 1.8;
+}
+
+.bankAccount {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-top: 1px solid rgba(201, 169, 97, 0.2);
+  border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+}
+
+.bankNumber {
+  font-size: 1.1rem;
+  font-family: 'Lato', sans-serif;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0;
+  word-break: break-all;
+  text-align: center;
+}
+
+.copyButton {
+  padding: 0.5rem 1.2rem;
+  background: transparent;
+  border: 1px solid rgba(201, 169, 97, 0.4);
+  color: var(--primary-gold);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Lato', sans-serif;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+}
+
+.copyButton:hover {
+  border-color: var(--primary-gold);
+  background: rgba(201, 169, 97, 0.05);
+  color: var(--primary-gold-dark);
+}
+
+.copyButton:active {
+  transform: scale(0.98);
+}
+
+/* RSVP Section */
+.rsvpSection {
+  padding: 8rem 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #faf8f3 100%);
+}
+
+.rsvpSubtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.rsvpForm {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 4rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.formGroup {
+  margin-bottom: 2rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #2c2c2c;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  transition: all 0.3s;
+  background: #fafafa;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.rsvpButton {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-gold-dark) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Lato', sans-serif;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+.rsvpButton:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(201, 169, 97, 0.4);
+}
+
+.rsvpButton:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.rsvpButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rsvpSuccess {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 4rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.rsvpSuccess p {
+  font-size: 1.3rem;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+.rsvpError {
+  background: #fee;
+  border: 2px solid #fcc;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #c33;
+}
+
+.rsvpError p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.rsvpNote {
+  margin-top: 2rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Footer */
+.footer {
+  padding: 4rem 2rem;
+  background: #2c2c2c;
+  color: var(--white);
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.footerDate {
+  color: var(--primary-gold);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .names {
+    gap: 1rem;
+  }
+
+  .heroName::after {
+    width: 40px;
+  }
+
+  .countdown {
+    gap: 1rem;
+  }
+
+  .countdownItem {
+    min-width: 110px;
+    padding: 2rem 1.5rem;
+  }
+
+  .countdownNumber {
+    font-size: 2.5rem;
+  }
+
+  .eventDetails,
+  .locationContent {
+    grid-template-columns: 1fr;
+  }
+
+  .rsvpForm {
+    padding: 2.5rem;
+  }
+
+  .storyQuote {
+    padding: 2rem;
+    font-size: 1.1rem;
+  }
+}
