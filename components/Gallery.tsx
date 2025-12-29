@@ -44,7 +44,7 @@ export default function Gallery() {
           Añade los nombres de tus fotos en el array <code>photoList</code>
         </p>
         <p className={styles.galleryExample}>
-          Ejemplo: <code>['foto1.jpg', 'foto2.jpg', 'foto3.jpg']</code>
+          Ejemplo: <code>[&apos;foto1.jpg&apos;, &apos;foto2.jpg&apos;, &apos;foto3.jpg&apos;]</code>
         </p>
       </div>
     )

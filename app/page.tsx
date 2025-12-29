@@ -149,8 +149,8 @@ export default function Home() {
                 el siguiente paso y unir nuestras vidas para siempre.
               </p>
               <p className={styles.storyQuote}>
-                "El mejor amor es el que despierta el alma y nos hace anhelar más,
-                que enciende nuestro corazón y trae paz a nuestras mentes."
+                &ldquo;El mejor amor es el que despierta el alma y nos hace anhelar más,
+                que enciende nuestro corazón y trae paz a nuestras mentes.&rdquo;
               </p>
             </div>
           </div>
